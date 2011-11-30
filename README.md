@@ -10,6 +10,8 @@ And it's all one method!
 ------------------------
 
 To make a new mailer with FedEx, just call:
+
+
 ```	
 	FedEx::Mailer.create do |m|
 		m.$recipients = "foo@bar.com"
@@ -18,15 +20,22 @@ To make a new mailer with FedEx, just call:
 ```	
 	
 And a template with something like:
+
+
 ```	
 	<p>Hello</p>
 	<br />
 	<p>World!</p>
 ```
+
+
 And You can use Dynamic ERb too!
+
 ```	
 	<p>Hello,</p> <%= $recipients %> <p>!</p>
 ```
+
+
 The legal stuff
 ---------------
 	Copyright (C) 2011 by cookiebatch
