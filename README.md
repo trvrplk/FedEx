@@ -12,7 +12,7 @@ And it's all one method!
 To make a new mailer with FedEx, just call:
 
 
-```	
+```	ruby
 	FedEx::Mailer.create do |m|
 		m.$recipients = "foo@bar.com"
 		m.$subject = "Foobar"
@@ -22,7 +22,7 @@ To make a new mailer with FedEx, just call:
 And a template with something like:
 
 
-```	
+```html
 	<p>Hello</p>
 	<br />
 	<p>World!</p>
@@ -31,7 +31,7 @@ And a template with something like:
 
 And You can use Dynamic ERb too!
 
-```	
+```	html
 	<p>Hello,</p> <%= $recipients %> <p>!</p>
 ```
 
