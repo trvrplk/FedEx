@@ -6,7 +6,8 @@ FedEx is just ActionMailer.
 
 All FedEx is is really just ActionMailer with sugar on top!
 
----------------------------------------------------------------
+
+
 And it's all one method!
 ------------------------
 
@@ -36,10 +37,15 @@ And You can use Dynamic ERb too!
 ```	html
 	<p>Hello,</p> <%= recipients %> <p>!</p>
 ```
----------------------------------------------------------------
+
+
+
 Use the Price Gun
 -----------------
 FedEx supports Markdown emails. To compile markdown emails, run `rake fedex:md file=bar_mailer/foo_email.md` (replace 'bar_mailer' and 'foo_email.md' with your content). Make sure that if using ERb tags use those, not any special syntax.
+
+
+
 The legal stuff
 ---------------
 	Copyright (C) 2011 by cookiebatch
