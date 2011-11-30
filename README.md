@@ -16,9 +16,9 @@ To make a new mailer with FedEx, just call:
 
 ```	ruby
 	FedEx::Mailer.create do |m|
-		m.#mailer_name
-		m.$recipients = "foo@bar.com"
-		m.$subject = "Foobar"
+		m.mailer_name
+		m.recipients = "foo@bar.com"
+		m.subject = "Foobar"
 	end
 ```	
 	
