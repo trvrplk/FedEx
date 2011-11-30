@@ -39,27 +39,8 @@ And You can use Dynamic ERb too!
 ---------------------------------------------------------------
 Use the Price Gun
 -----------------
-FedEx supports Markdown emails, as long as you use the rake task in the next section. Make sure that if using ERb tags use those, not any special syntax.
----------------------------------------------------------------
-Generators and Rake Tasks and Enviornment Variables, Oh My!
-===========================================================
-
-###### Generators ######
-FedEx comes with a `mailer_view` genrator. Given a view direcory called `bar`, run `rails g mailer_view foo_email` for example and get: 
-``` markdown
-	# find me in views/bar_mailer/foo_email.md
-```
-
-Make sure that the name provided for the generator is the same as the mailing name!
-
-###### Rake Tasks ######
-To compile markdown emails, run `rake fedex:md file=bar_mailer/foo_email.md`
-
-**NOTE: if you're using dynamic ERb than add '.erb' to the name as this is not automaticaly done**
-
-###### Environment Variables ######
-Options passed on FedEx-related Rake tasks ar Environment Variables. That's it.
----------------------------------------------------------------The legal stuff
+FedEx supports Markdown emails. To compile markdown emails, run `rake fedex:md file=bar_mailer/foo_email.md` (replace 'bar_mailer' and 'foo_email.md' with your content). Make sure that if using ERb tags use those, not any special syntax.
+The legal stuff
 ---------------
 	Copyright (C) 2011 by cookiebatch
 
