@@ -6,6 +6,7 @@ FedEx is just ActionMailer.
 
 All FedEx is is really just ActionMailer with sugar on top!
 
+---------------------------------------------------------------
 And it's all one method!
 ------------------------
 
@@ -14,6 +15,7 @@ To make a new mailer with FedEx, just call:
 
 ```	ruby
 	FedEx::Mailer.create do |m|
+		m.#mailer_name
 		m.$recipients = "foo@bar.com"
 		m.$subject = "Foobar"
 	end
@@ -32,11 +34,32 @@ And a template with something like:
 And You can use Dynamic ERb too!
 
 ```	html
-	<p>Hello,</p> <%= $recipients %> <p>!</p>
+	<p>Hello,</p> <%= recipients %> <p>!</p>
+```
+---------------------------------------------------------------
+Use the Price Gun
+-----------------
+FedEx supports Markdown emails, as long as you use the rake task in the next section. Make sure that if using ERb tags use those, not any special syntax.
+---------------------------------------------------------------
+Generators and Rake Tasks and Enviornment Variables, Oh My!
+===========================================================
+
+###### Generators ######
+FedEx comes with a `mailer_view` genrator. Given a view direcory called `bar`, run `rails g mailer_view foo_email` for example and get: 
+``` markdown
+	# find me in views/bar_mailer/foo_email.md
 ```
 
+Make sure that the name provided for the generator is the same as the mailing name!
 
-The legal stuff
+###### Rake Tasks ######
+To compile markdown emails, run `rake fedex:md file=bar_mailer/foo_email.md`
+
+**NOTE: if you're using dynamic ERb than add '.erb' to the name as this is not automaticaly done**
+
+###### Environment Variables ######
+Options passed on FedEx-related Rake tasks ar Environment Variables. That's it.
+---------------------------------------------------------------The legal stuff
 ---------------
 	Copyright (C) 2011 by cookiebatch
 
