@@ -11,17 +11,15 @@ All FedEx is is really just ActionMailer with sugar on top!
 And it's all one method!
 ------------------------
 
-To make a new mailer with FedEx, just call:
-
+To make a new mailer with FedExdo something like this, with your information:
 
 ```	ruby
-	FedEx::Mailer.create do |m|
-		m.mailer_name
-		m.recipients = "foo@bar.com"
-		m.subject = "Foobar"
+	FedEx::Mailer.new do
+		recipients ['foo@bar.com', 'bar@foo.com']
+		subject "Hello World!"
 	end
-```	
-	
+```
+
 And a template with something like:
 
 
@@ -30,14 +28,6 @@ And a template with something like:
 	<br />
 	<p>World!</p>
 ```
-
-
-And You can use Dynamic ERb too!
-
-```	html
-	<p>Hello,</p> <%= recipients %> <p>!</p>
-```
-
 
 
 Use the Price Gun
@@ -66,4 +56,4 @@ The legal stuff
 	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-	THE SOFTWARE.	
+	THE SOFTWARE.

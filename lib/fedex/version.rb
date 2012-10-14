@@ -1,3 +1,3 @@
 module Fedex
-  VERSION = "0.1.0.alpha"
+  VERSION = "0.3.0"
 end
