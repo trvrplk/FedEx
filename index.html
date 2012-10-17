@@ -63,17 +63,15 @@
 <span class="k">end</span>
 </pre></div>
 
-<p>Becomes this with FedEx:
-``ruby
-  class HelloWorld &lt; ActionMailer::Base
-    delivers_from '<a href="mailto:foo@example.com">foo@example.com</a>'</p>
+<p>Becomes this with FedEx:</p>
 
-<pre><code>def hello
-  recipients 'bar@example.com'
-  subject "O HAI!"
-</code></pre>
+<div class="highlight"><pre>  <span class="k">class</span> <span class="nc">HelloWorld</span> <span class="o">&lt;</span> <span class="no">ActionMailer</span><span class="o">::</span><span class="no">Base</span>
+    <span class="n">delivers_from</span> <span class="s1">'foo@example.com'</span>
 
-<p>``</p>
+    <span class="k">def</span> <span class="nf">hello</span>
+      <span class="n">recipients</span> <span class="s1">'bar@example.com'</span>
+      <span class="n">subject</span> <span class="s2">"O HAI!"</span>
+</pre></div>
       </section>
 
       <footer>
